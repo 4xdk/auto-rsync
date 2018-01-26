@@ -3,17 +3,18 @@
 function runBackup {
 	if [ $# -eq 2 ]; then
 		if [ -d $1 ]; then
-			local loc_DST=$1;
+			local loc_DST=$1
 		else
-        	echo "Backup location $1 not found, exiting";
-			exit 1;
+        	echo "Backup location $1 not found, exiting"
+			showHelp
+			exit 1
 		fi
 		
 	    if [ -f $2 ]; then
             local loc_SRCLIST=$2            
         else
             echo "File $2 not found, exiting"
-			showHelp();
+			showHelp
             exit 1
         fi
 
@@ -25,7 +26,7 @@ function runBackup {
 		done < $loc_SRCLIST
 	else
 		echo "Missing argument(s)"
-		showHelp()
+		showHelp
 		exit 1
 	fi
 }
