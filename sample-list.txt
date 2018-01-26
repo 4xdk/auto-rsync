@@ -1,0 +1,2 @@
+/home/user/
+/media/user/mounted-drive/folder-to-backup/
