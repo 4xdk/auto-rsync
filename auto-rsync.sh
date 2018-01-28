@@ -11,18 +11,18 @@ OPTIND=1
 while getopts "h?vi:d:o:r" opt; do
     case "$opt" in
 		d)  DESTINATION=$OPTARG
-    		;;
+			;;
 		#o)  OUTPUT_FILE=$OPTARG
         #	;;
-    	h)	show_help
-        	exit 0
-        	;;
+		h)	show_help
+			exit 0
+			;;
 		i)  INPUT=$OPTARG
 			;;
 		r)  REMOVE=1
 			;;
 		v)  VERBOSE=1
-        	;;
+			;;
 		\?) echo "Invalid option" >&2
 			;;
     esac
@@ -39,9 +39,9 @@ if [ -z $DESTINATION ] || [ ! -d $DESTINATION ]; then
 fi
 
 if [ -z $INPUT ] || [ ! -f $INPUT ]; then
-    echo "File $INPUT not found, exiting"
+	echo "File $INPUT not found, exiting"
 	show_help
-    exit 1
+	exit 1
 fi
 
 # adjust rsync parameters
