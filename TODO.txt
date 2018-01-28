@@ -1,0 +1,2 @@
+- handle closing the program with ctrl+c
+- add file/dir exclusions (for .git for example)
