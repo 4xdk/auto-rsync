@@ -1,2 +1,4 @@
 - handle closing the program with ctrl+c
 - add file/dir exclusions (for .git for example)
+- add facility to restore backup
+- add facility to specify folder for each of the backup dirs
